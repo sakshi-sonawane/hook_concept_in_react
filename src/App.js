@@ -1,23 +1,23 @@
 import logo from './logo.svg';
 import './App.css';
-
+import React,{Component, useState} from 'react';
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  
+
+      const[my_name, changeMyName]=useState("Sakshi");
+  const[my_age, changeMyage]=useState(22);
+
+  const buttonClick=()=>
+  {
+    changeMyName("Sakshi Sonawane");
+  }
+  return(
+  <div>
+    <h2>
+      My name is {my_name}
+    </h2>
+    <h2>And My Age is:{my_age}</h2>
+    <button onClick={buttonClick}>Change Name</button>
     </div>
   );
 }
